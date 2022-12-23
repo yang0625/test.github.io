@@ -2,7 +2,7 @@ name: deploy
 on:
   push:
     branches:
-      - source
+      - main
 jobs:
   build-deploy:
     runs-on: ubuntu-20.04
@@ -25,5 +25,4 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }} # 另外还支持 deploy_token 和 github_token
           external_repository: yang0625/test.github.io 
           publish_dir: ./public
-#          keep_files: false
           publish_branch: main
