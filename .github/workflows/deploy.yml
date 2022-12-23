@@ -2,7 +2,7 @@ name: deploy
 on:
   push:
     branches:
-      - main
+      - source
 jobs:
   build-deploy:
     runs-on: ubuntu-20.04
@@ -26,4 +26,4 @@ jobs:
           external_repository: yang0625/test.github.io 
           publish_dir: ./public
 #          keep_files: false
-          publish_branch: master
+          publish_branch: main
